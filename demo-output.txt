@@ -1,0 +1,8 @@
+T1 PASS | Reminder + EmailChannel | result=EMAIL-> Reminder: Prepare for midterm
+T2 PASS | Reminder + SmsChannel | result=SMS-> Reminder: Prepare for midterm
+T3 PASS | UrgentAlert + EmailChannel | result=EMAIL-> URGENT: Submit assignment3
+T4 PASS | UrgentAlert + SmsChannel | result=SMS-> URGENT: Submit assignment3
+T5 PASS | sameObject=true | stateUnchanged=true before=EMAIL-> Reminder: Tomorrow's quiz | after=SMS-> Reminder: Tomorrow's quiz
+T6 PASS | Reminder + PushChannel | result=PUSH-> Reminder: Prepare for midterm
+T7 PASS | UrgentAlert + PushChannel | result=PUSH-> URGENT: Submit assignment3
+SUMMARY 7/7 PASS
