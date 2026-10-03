@@ -7,7 +7,7 @@
 - Topic: Bridge Pattern - Notification
 - Repository URL: https://github.com/yerassell/assignment3-bridge-pattern.git
 - Base Commit: b0141ba3923d26aac2c2f25ac332d71c43cdb0a5
-- Extended Commit: 
+- Extended Commit: 519713aa85331219892990095059f01cbbc1e057
 
 ## Table Mapping
 
