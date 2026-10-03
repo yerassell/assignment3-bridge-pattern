@@ -4,7 +4,7 @@
 
 - Name: Assel Yermekkyzy
 - Group: SE-2524
-- Topic: Bridge Pattern
+- Topic: Bridge Pattern - Notification
 - Repository URL: https://github.com/yerassell/assignment3-bridge-pattern.git
 - Base Commit: b0141ba3923d26aac2c2f25ac332d71c43cdb0a5
 - Extended Commit: 
