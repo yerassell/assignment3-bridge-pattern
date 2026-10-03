@@ -1,0 +1,41 @@
+diff --git a/src/Main.java b/src/Main.java
+index da2197b..9a3bafa 100644
+--- a/src/Main.java
++++ b/src/Main.java
+@@ -4,6 +4,7 @@ import abstraction.UrgentAlert;
+ import implementor.Channel;
+ import implementor.EmailChannel;
+ import implementor.SmsChannel;
++import implementor.PushChannel;
+ 
+ public class Main{
+     public static void main(String[] args){
+@@ -37,7 +38,14 @@ public class Main{
+             System.out.println("Expected before: EMAIL-> Reminder: Tomorrow's quiz");
+             System.out.println("Expected after: SMS-> Reminder: Tomorrow's quiz");
+         }
+-        System.out.println("SUMMARY " + passed + "/5 PASS");
++
++        Reminder r3 = new Reminder("6", new PushChannel(), "Prepare for midterm");
++        passed += check("T6", "Reminder + PushChannel", r3.execute(), "PUSH-> Reminder: Prepare for midterm");
++
++        UrgentAlert u3 = new UrgentAlert("7", new PushChannel(), "Submit assignment3");
++        passed += check("T7", "UrgentAlert + PushChannel", u3.execute(), "PUSH-> URGENT: Submit assignment3");
++
++        System.out.println("SUMMARY " + passed + "/7 PASS");
+     }
+ 
+     private static int check(String id, String setup, String actual, String expected){
+diff --git a/src/implementor/PushChannel.java b/src/implementor/PushChannel.java
+new file mode 100644
+index 0000000..24c692b
+--- /dev/null
++++ b/src/implementor/PushChannel.java
+@@ -0,0 +1,7 @@
++package implementor;
++
++public class PushChannel implements Channel{
++    public String send(String message){
++        return "PUSH-> " + message;
++    }
++}
